@@ -1,13 +1,10 @@
 import { revalidatePath } from 'next/cache';
 import { type NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
     try {
-        const signature = req.headers.get('sanity-webhook-signature');
-        if (!signature) {
-            return new Response('No signature header', { status: 401 });
-        }
-
         const secret = process.env.SANITY_REVALIDATE_SECRET;
         if (!secret) {
             console.error("Missing SANITY_REVALIDATE_SECRET in environment variables");
