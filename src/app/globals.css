@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    --background: #fefcf8; /* Soft warm white */
-    --foreground: #0a0a0a; /* Deep charcoal ink */
+    --background: #f3f4f6; /* Modern light gray */
+    --foreground: #111827; /* Deep charcoal */
     --accent: #f97316; /* Glowing orange accent */
-    --border-color: #e5e5e5; /* Soft modern gray borders */
+    --border-color: #d1d5db; /* Soft gray borders */
   }
 
   /* Force light mode behavior to match the reference */
   @media (prefers-color-scheme: dark) {
     :root {
-       --background: #fefcf8;
-       --foreground: #0a0a0a;
+       --background: #f3f4f6;
+       --foreground: #111827;
        --accent: #f97316;
-       --border-color: #e5e5e5;
+       --border-color: #d1d5db;
     }
   }
 
   html {
     scroll-behavior: smooth;
     background-color: var(--background);
-    background-image: radial-gradient(circle at top center, #ffffff 0%, #fefcf8 60%, #fff7eb 100%);
+    background-image: radial-gradient(circle at top center, #f9fafb 0%, #f3f4f6 60%, #e5e7eb 100%);
     background-attachment: fixed;
   }
 }
