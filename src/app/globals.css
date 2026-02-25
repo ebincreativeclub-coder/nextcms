@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    --background: #ff2800; /* Ferrari red */
-    --foreground: #111827; /* Deep charcoal / black text */
-    --accent: #ffd100; /* Ferrari yellow accent */
-    --border-color: #cc2000; /* Darker red borders */
+    --background: #34d399; /* Emerald green */
+    --foreground: #022c22; /* Very dark emerald charcoal */
+    --accent: #f59e0b; /* Amber accent */
+    --border-color: #10b981; /* Darker emerald */
   }
 
   /* Force light mode behavior to match the reference */
   @media (prefers-color-scheme: dark) {
     :root {
-       --background: #ff2800;
-       --foreground: #111827;
-       --accent: #ffd100;
-       --border-color: #cc2000;
+       --background: #34d399;
+       --foreground: #022c22;
+       --accent: #f59e0b;
+       --border-color: #10b981;
     }
   }
 
   html {
     scroll-behavior: smooth;
     background-color: var(--background);
-    background-image: radial-gradient(circle at top center, #ff411c 0%, #ff2800 60%, #cc2000 100%);
+    background-image: radial-gradient(circle at top center, #6ee7b7 0%, #34d399 60%, #10b981 100%);
     background-attachment: fixed;
   }
 }
